@@ -26,6 +26,7 @@ type Config struct {
 	APP struct {
 		Mode        string //主程序运行模式
 		VerifyMode  string //邮箱验证模式	(smtp)-(mx)-(regex)
+		ChunkSize   int
 		RegexConfig struct {
 			Goroutines int
 			Regex      string

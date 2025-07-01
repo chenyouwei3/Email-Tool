@@ -42,7 +42,7 @@ func main() {
 	//数据排序分片并发处理
 	/* ---------------------模式选择----------------*/
 	// 切片处理，每片 100 个邮箱
-	chunks := chunkEmails(emails, 10)
+	chunks := chunkEmails(emails, config.Conf.APP.ChunkSize)
 	//系统已默认配置宽带账号
 	//请以adsl-start和adsl-stop
 	//或pppoe-start和pppoe-stop
